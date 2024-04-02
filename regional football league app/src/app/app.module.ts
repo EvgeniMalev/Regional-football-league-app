@@ -1,19 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
 import { RegisterComponent } from './register/register.component';
-
+import { TeamComponent } from './team/team.component';
+import { TeamDetailsComponent } from './team-details/team-details.component';
 import { AddGameComponent } from './add-game/add-game.component';
 import { EditGameComponent } from './edit-game/edit-game.component';
 import { RemoveGameComponent } from './remove-game/remove-game.component';
 import { AddTeamComponent } from './add-team/add-team.component';
 import { EditTeamComponent } from './edit-team/edit-team.component';
 import { RemoveTeamComponent } from './remove-team/remove-team.component';
-
-import { GamePlayed } from './core/game.played';
-import { TeamRanklist } from './core/team.ranklist';
 
 import { AppComponent } from './app.component';
 
@@ -22,7 +21,7 @@ import { AppComponent } from './app.component';
     AppComponent,
     LoginComponent,
     UserComponent,
-    RegisterComponent
+    RegisterComponent,
     TeamComponent,
     TeamDetailsComponent,
     AddTeamComponent,
@@ -33,16 +32,18 @@ import { AppComponent } from './app.component';
     RemoveGameComponent
   ],
 
-  
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(rootRouterConfig, { useHash: false }),
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
-    AngularFireAuthModule // imports firebase/auth, only needed for auth features
+    // Initialize AngularTeamModule (replace AngularTeamModule with your correct module)
+    AngularTeamModule.initializeApp(environment.team)
   ],
-  providers: [AuthService, UserService, UserResolver, AuthGuard],
+
+  providers: [
+    AuthService, // Include AuthService in providers
+    DataService // Include DataService in providers
+  ], 
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
