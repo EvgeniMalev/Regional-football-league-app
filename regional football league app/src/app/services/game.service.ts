@@ -7,7 +7,7 @@ import { Game } from '../models/game.model';
   providedIn: 'root'
 })
 export class GameService {
-  private apiUrl = 'http://example.com/api/games'; // Replace with your API endpoint
+  private apiUrl = 'https://bfs-vt.com/pyrvenstva/oblastna-futbolna-grupa-ug'; 
 
   constructor(private http: HttpClient) {}
 
