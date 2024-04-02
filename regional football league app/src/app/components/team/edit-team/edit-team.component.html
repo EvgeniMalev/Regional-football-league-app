@@ -1,0 +1,11 @@
+
+<h2>Edit Team</h2>
+
+<form (ngSubmit)="editTeam()">
+  <div class="form-group">
+    <label for="teamName">Team Name</label>
+    <input type="text" id="teamName" name="teamName" class="form-control" [(ngModel)]="editedTeam.name" required>
+  </div>
+ 
+  <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
