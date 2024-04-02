@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AngularTeamModule } from 'path/to/angular-team.module'; // Import the correct AngularTeamModule
+import { environment } from 'path/to/environment'; // Import the environment file
 
 import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
@@ -15,6 +17,8 @@ import { EditTeamComponent } from './edit-team/edit-team.component';
 import { RemoveTeamComponent } from './remove-team/remove-team.component';
 
 import { AppComponent } from './app.component';
+import { AuthService } from './auth/auth.service'; // Import AuthService
+import { DataService } from './core/data.service'; // Import DataService
 
 @NgModule({
   declarations: [
@@ -35,13 +39,12 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    // Initialize AngularTeamModule (replace AngularTeamModule with your correct module)
-    AngularTeamModule.initializeApp(environment.team)
+    AngularTeamModule.initializeApp(environment.team) 
   ],
 
   providers: [
-    AuthService, // Include AuthService in providers
-    DataService // Include DataService in providers
+    AuthService,
+    DataService 
   ], 
 
   bootstrap: [AppComponent]
