@@ -1,0 +1,19 @@
+{
+  "extends": ["tslint:recommended", "tslint-eslint-rules"],
+  "rules": {
+    "directive-selector": [true, "attribute", "app", "camelCase"],
+    "component-selector": [true, "element", "app", "kebab-case"],
+    "no-console": false,
+    "quotemark": [true, "single", "avoid-escape", "jsx-double"],
+    "no-consecutive-blank-lines": false,
+    "ordered-imports": false,
+    "object-literal-sort-keys": false,
+    "no-submodule-imports": false,
+    "member-access": false,
+    "interface-name": false,
+    "max-classes-per-file": false,
+    "no-empty": false,
+    "max-line-length": false
+  },
+  "rulesDirectory": []
+}
