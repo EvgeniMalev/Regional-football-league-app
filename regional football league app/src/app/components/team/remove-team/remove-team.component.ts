@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Team } from '../team.model';
 import { TeamService } from '../team.service';
 
 @Component({
@@ -8,21 +9,30 @@ import { TeamService } from '../team.service';
   styleUrls: ['./remove-team.component.css']
 })
 export class RemoveTeamComponent implements OnInit {
-  teamId: string;
+  team: Team;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private teamService: TeamService
-  ) {}
+  ) { }
 
-  ngOnInit() {
-    this.teamId = this.route.snapshot.paramMap.get('id');
+  ngOnInit(): void {
+    this.getTeam();
   }
 
-  removeTeam() {
-    this.teamService.removeTeam(this.teamId).then(() => {
-      this.router.navigate(['/teams']);
-    });
+  getTeam(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.teamService.getTeam(id)
+      .subscribe(team => this.team = team);
+  }
+
+  removeTeam(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.teamService.removeTeam(id)
+      .subscribe(() => {
+        console.log('Team removed successfully');
+        this.router.navigate(['/team-list']); // Navigate to team list after removal
+      });
   }
 }
