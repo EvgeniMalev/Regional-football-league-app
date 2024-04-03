@@ -1,0 +1,21 @@
+<div class="container">
+  <header>
+    <h1>Welcome to My Football App</h1>
+    <nav>
+      <a routerLink="/home" routerLinkActive="active">Home</a>
+      <a routerLink="/teams" routerLinkActive="active">Teams</a>
+      <a routerLink="/games" routerLinkActive="active">Games</a>
+      <a routerLink="/statistics" routerLinkActive="active">Statistics</a>
+      <a routerLink="/profile" routerLinkActive="active">Profile</a>
+      <button *ngIf="!authService.isAuthenticated()" (click)="login()">Login</button>
+      <button *ngIf="authService.isAuthenticated()" (click)="logout()">Logout</button>
+    </nav>
+  </header>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <footer>
+    <img src="assets/logo.png" alt="Football Logo" class="logo"> 
+    <p>&copy; 2024 My Football App</p>
+  </footer>
+</div>
