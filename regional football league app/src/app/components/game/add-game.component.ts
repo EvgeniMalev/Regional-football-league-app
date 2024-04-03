@@ -1,4 +1,4 @@
-add-game.component.ts
+
 
 import { Component } from '@angular/core';
 
