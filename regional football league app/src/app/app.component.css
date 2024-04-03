@@ -1,0 +1,46 @@
+.container {
+  background-color: lightgreen;
+  padding: 20px;
+  font-family: 'Oswald', sans-serif; 
+}
+
+h1 {
+  text-shadow: 2px 2px 4px #888; 
+}
+
+nav {
+  margin-bottom: 20px;
+}
+
+nav a {
+  color: #324681; 
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: #1D517E; 
+  color: white;
+  border: 1px solid white; 
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+footer p {
+  color: lightgray; 
+}
+
+.logo {
+  width: 1cm;
+  height: 1cm;
+  vertical-align: middle;
+  margin-right: 5px;
+}
