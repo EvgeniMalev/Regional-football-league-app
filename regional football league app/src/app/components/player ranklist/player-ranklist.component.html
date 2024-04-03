@@ -1,0 +1,24 @@
+<h2>Player Ranklist</h2>
+
+<div *ngIf="playerRanklist.length > 0">
+  <table>
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Player Name</th>
+        <th>Goals Scored</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let player of playerRanklist; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ player.name }}</td>
+        <td>{{ player.goalsScored }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="playerRanklist.length === 0">
+  <p>No players available</p>
+</div>
