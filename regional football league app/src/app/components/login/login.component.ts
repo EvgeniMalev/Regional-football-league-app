@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router'; // Import Router
 import { AuthService } from '../auth/auth.service';
 
 @Component({
@@ -11,11 +12,16 @@ export class LoginComponent {
   password: string = '';
   errorMessage: string = '';
 
-  constructor(private authService: AuthService) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router // Inject Router
+  ) {}
 
   login() {
     this.authService.login(this.email, this.password)
       .then(() => {
+        // Navigate to the dashboard or some other page
+        this.router.navigate(['/dashboard']);
       })
       .catch(error => {
         this.errorMessage = error.message;
