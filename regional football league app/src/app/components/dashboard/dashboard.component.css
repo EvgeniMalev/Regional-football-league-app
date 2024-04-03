@@ -1,8 +1,32 @@
-.dashboard {
-  text-align: center;
-  margin-top: 20px;
+.container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
 }
 
-.actions button {
-  margin: 5px;
+.image {
+  max-width: 100%; 
+  max-height: 100%; 
+}
+
+/* Button effects */
+.button {
+  background-color: #1D517E; 
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.button:hover {
+  background-color: #144175; 
+}
+
+
+.text-field {
+  border: 2px solid red; 
+  padding: 10px; 
 }
