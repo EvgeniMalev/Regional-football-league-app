@@ -1,13 +1,42 @@
-.header{
-  text-align: center;
-  font-size: 30px;
-  margin-bottom: 40px;
+.form-label {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: football-ball 2s linear infinite;
 }
 
-.row{
-  margin-top: 10px;
+.form-group {
+  padding: 10px;
 }
 
-.error{
-  color: red;
+.form-control {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn-primary {
+  background-color: lightblue;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #6bb9ff;
+}
+
+@keyframes football-ball {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
