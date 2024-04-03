@@ -1,0 +1,6 @@
+<h2>Remove Player</h2>
+
+<div *ngIf="player">
+  <p>Are you sure you want to remove player '{{ player.name }}'?</p>
+  <button (click)="removePlayer()">Remove</button>
+</div>
