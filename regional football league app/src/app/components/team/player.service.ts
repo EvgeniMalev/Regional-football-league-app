@@ -10,6 +10,9 @@ export class PlayerService {
     { id: 1, name: 'Ivanov', number: 8, goalsScored: 8 },
     { id: 2, name: 'Bodurkov', number: 2, goalsScored: 4 },
     { id: 3, name: 'Marinov', number: 12, goalsScored: 3 }
+    { id: 5, name: 'Krastev', number: 6, goalsScored: 3 },
+    { id: 6, name: 'Milov', number: 44, goalsScored: 2 }
+    { id: 7, name: 'Donchev', number: 2, goalsScored: 1 }
   ];
 
   constructor() { }
