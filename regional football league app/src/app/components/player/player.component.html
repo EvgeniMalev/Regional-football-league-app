@@ -1,0 +1,11 @@
+<div class="player-container">
+  <h2>Player Details</h2>
+  <div *ngIf="player">
+    <p><strong>Name:</strong> {{ player.firstName }} {{ player.lastName }}</p>
+    <p><strong>Number:</strong> {{ player.number }}</p>
+    <p><strong>Goals Scored:</strong> {{ player.goalsScored }}</p>
+  </div>
+  <div *ngIf="!player">
+    <p>No player selected.</p>
+  </div>
+</div>
