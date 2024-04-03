@@ -1,0 +1,17 @@
+h2 {
+  color: black;
+  animation: shadow-animation 2s infinite alternate; 
+}
+
+@keyframes shadow-animation {
+  0% {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8); 
+  }
+}
+
+:host {
+  background-color: #A09117;
+}
