@@ -7,9 +7,16 @@ import { Team } from './team.model';
 })
 export class TeamService {
   private teams: Team[] = [
-    { id: 1, name: 'Spartak' },
-    { id: 2, name: 'Levski' },
+    { id: 1, name: 'Spartak Polski Senovets' },
+    { id: 2, name: 'Levski Strazhitsa' },
     { id: 3, name: 'Lovico' }
+    { id: 4, name: 'Botev B Ch' },
+    { id: 5, name: 'Yantra Pt' },
+    { id: 6, name: 'CSKA Vishovgrad' }
+    { id: 7, name: 'Rakovski Emen' },
+    { id: 8, name: 'Buditel Byala reka' },
+    { id: 9, name: 'Starotel Oresh' }
+    { id: 10, name: 'Voevodov Dragizhevo' }
   ];
 
   constructor() { }
