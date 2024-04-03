@@ -1,0 +1,13 @@
+
+
+<div *ngIf="players && players.length">
+  <h2>Player List</h2>
+  <ul>
+    <li *ngFor="let player of players">
+      <a [routerLink]="['/players', player.id]">{{ player.name }}</a>
+    </li>
+  </ul>
+</div>
+<div *ngIf="!players || players.length === 0">
+  <p>No players found.</p>
+</div>
