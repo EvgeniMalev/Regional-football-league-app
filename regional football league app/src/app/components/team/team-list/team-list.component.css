@@ -1,0 +1,15 @@
+.team-list-container {
+  margin-top: 20px;
+}
+
+.team-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.team-item:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
