@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { TeamService } from '../team.service';
 import { Team } from '../team.model';
+import { TeamService } from '../team.service';
 
 @Component({
   selector: 'app-edit-team',
@@ -9,25 +9,30 @@ import { Team } from '../team.model';
   styleUrls: ['./edit-team.component.css']
 })
 export class EditTeamComponent implements OnInit {
-  editedTeam: Team = { id: '', name: '' };
+  team: Team;
+  teamName: string = '';
 
   constructor(
     private route: ActivatedRoute,
     private teamService: TeamService
-  ) {}
+  ) { }
 
-  ngOnInit() {
-    const teamId = this.route.snapshot.paramMap.get('id');
-    this.loadTeamDetails(teamId);
+  ngOnInit(): void {
+    this.getTeam();
   }
 
-  loadTeamDetails(teamId: string) {
-    this.teamService.getTeamById(teamId).subscribe(team => {
-      this.editedTeam = team;
-    });
+  getTeam(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.teamService.getTeam(id)
+      .subscribe(team => {
+        this.team = team;
+        this.teamName = team.name;
+      });
   }
 
-  editTeam() {
-    this.teamService.updateTeam(this.editedTeam);
+  updateTeam(): void {
+    this.team.name = this.teamName;
+    this.teamService.updateTeam(this.team)
+      .subscribe(() => console.log('Team updated successfully'));
   }
 }
