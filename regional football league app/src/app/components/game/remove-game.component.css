@@ -1,0 +1,23 @@
+
+.remove-game-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #FF0000;
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid #FF0000;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #CC0000;
+  border-color: #CC0000;
+}
