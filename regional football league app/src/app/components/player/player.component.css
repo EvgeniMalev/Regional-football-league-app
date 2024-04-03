@@ -1,0 +1,13 @@
+
+.player-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 10px;
+}
