@@ -1,0 +1,11 @@
+<div class="team-list-container">
+  <h2>Team List</h2>
+  <div *ngIf="teams && teams.length > 0; else noTeams">
+    <div class="team-item" *ngFor="let team of teams" (click)="onTeamClick(team.id)">
+      <h3>{{ team.name }}</h3>
+    </div>
+  </div>
+  <ng-template #noTeams>
+    <p>No teams available.</p>
+  </ng-template>
+</div>
