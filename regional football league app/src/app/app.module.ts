@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AngularTeamModule } from 'path/to/angular-team.module'; // Import the correct AngularTeamModule
-import { environment } from 'path/to/environment'; // Import the environment file
+import { AngularTeamModule } from 'path/to/angular-team.module'; 
+import { environment } from 'path/to/environment'; 
 
 import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
