@@ -3,6 +3,21 @@
 }
 
 .btn-primary {
-  background-color: #057bff;
-  color: #1C2ABD;
+  background-color: #0A5984;
+  color: #1c2abd;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scroll-text {
+  white-space: nowrap;
+  overflow: hidden;
+  animation: scroll 10s linear infinite;
 }
